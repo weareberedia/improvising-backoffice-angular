@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./improvising-backoffice-angular:/app
+      - /app/node_modules
+    command: sh -c "npm install && ng serve --host 0.0.0.0"
