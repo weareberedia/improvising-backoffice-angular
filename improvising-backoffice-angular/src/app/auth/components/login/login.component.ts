@@ -9,7 +9,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     ReactiveFormsModule,
     RouterModule,
-    MatInputModule],
+    MatInputModule
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
