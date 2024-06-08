@@ -1,4 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+
+    // ******************** scrollbar ********************
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #d6d5d5;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #bdbdbd;
+    }
+    // ****************************************
+
+    // ******************** generic tags ********************
+    // buttons
+    .submit-btn {
+        background-color: #f1f0f0;
+        color: #0cad78;
+        box-shadow: none !important;
+        border: 1px solid #bdbdbd !important;
+    }
+
+    .cancel-btn {
+        background-color: #f1f0f0;
+        color: #f96c4a;
+        box-shadow: none !important;
+        border: 1px solid #bdbdbd !important;
+    }
+
+    .link {
+        transition: 0.8s;
+        color: #0cad78;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .link:hover {
+        transition: 0.8s;
+        color: #0cad7779;
+    }
+    // ****************************************
+}

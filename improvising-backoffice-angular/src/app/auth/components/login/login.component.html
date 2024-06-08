@@ -1,5 +1,17 @@
-<mat-form-field appearance="outline" class="mff">
-    <mat-label>Correo / Usuario</mat-label>
-    <input matInput formControlName="authValue">
-    <!-- <mat-hint>{{ authValueErrorMsg }}</mat-hint> -->
-</mat-form-field>
+<div class="container d-flex">
+    <h1><strong>Rendi</strong>Apps</h1>
+    <h3>Autenticarse</h3>
+    <form>
+        <mat-form-field appearance="outline" class="mff">
+            <mat-label>Correo / Usuario</mat-label>
+            <input matInput formControlName="authValue">
+            <!-- <mat-hint>{{ authValueErrorMsg }}</mat-hint> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="mff">
+            <mat-label>Contraseña</mat-label>
+            <input matInput formControlName="authValue">
+            <!-- <mat-hint>{{ authValueErrorMsg }}</mat-hint> -->
+        </mat-form-field>    
+    </form>
+    <a class="link" routerLink="recuperar-contraseña">¿Has olvidado la contraseña?</a>
+</div>
