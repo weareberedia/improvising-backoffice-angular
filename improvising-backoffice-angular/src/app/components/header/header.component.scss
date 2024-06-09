@@ -1,0 +1,18 @@
+div {
+    width: 90vw;
+    height: 8vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin: 1rem;
+    }
+
+    a {
+        margin: 1rem;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+}

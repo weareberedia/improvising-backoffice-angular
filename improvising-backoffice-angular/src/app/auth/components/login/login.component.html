@@ -1,17 +1,26 @@
-<div class="container d-flex">
-    <h1><strong>Rendi</strong>Apps</h1>
+<div>
+    <h1>Beredia ERP</h1>
     <h3>Autenticarse</h3>
     <form>
-        <mat-form-field appearance="outline" class="mff">
-            <mat-label>Correo / Usuario</mat-label>
+        <mat-form-field appearance="outline">
+            <mat-label>Correo</mat-label>
             <input matInput>
+            <mat-icon matSuffix>person</mat-icon>
             <!-- <mat-hint>{{ authValueErrorMsg }}</mat-hint> -->
         </mat-form-field>
-        <mat-form-field appearance="outline" class="mff">
+
+        <mat-form-field appearance="outline">
             <mat-label>Contraseña</mat-label>
-            <input matInput>
-            <!-- <mat-hint>{{ authValueErrorMsg }}</mat-hint> -->
+            <input matInput (focus)="null" (keyup)="null" [type]="hidePassword ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hidePassword = !hidePassword">
+                {{ hidePassword ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+            <!-- <mat-hint>{{ passwordErrorMsg }}</mat-hint> -->
         </mat-form-field>
+
+        <mat-checkbox>Recuerdame</mat-checkbox>
+
+        <button mat-stroked-button (click)="login()" [disabled]="false" type="button">Iniciar sesión</button>
     </form>
     <a class="link" routerLink="recuperar-contraseña">¿Has olvidado la contraseña?</a>
 </div>

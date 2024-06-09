@@ -1,0 +1,13 @@
+div {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+    div {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        overflow: auto;
+    }
+}

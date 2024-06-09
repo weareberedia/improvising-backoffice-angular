@@ -1,46 +1,23 @@
-.container {
-    transition: 0.4s;
-    width: 480px;
-    background-color: #fff;
-    border: solid 1px #0cad78;
-    border-radius: 2%;
-    border-color: #0cad78;
+div {
+    min-width: 30vw;
+    padding: 1rem;
+    border: solid 1px;
+    border-radius: 1rem;
     text-align: center;
-    padding: 10px;
 
     h1 {
-        color: #0cad78;
+        color: #005cbb;
+        font-size: 2rem;
     }
 
     h3 {
         color: #6c757d;
-    }
-
-    p {
-        color: #6c757d;
-        font-weight: lighter;
-        margin-top: 5px;
-        margin-bottom: 0;
+        font-size: 1.5rem;
     }
 
     form {
         display: flex;
         flex-direction: column;
-        margin-bottom: 10px;
-        padding: 10px;
-
-        #remember-user-container {
-            display: flex;
-            justify-content: end;
-            margin-right: 10px;
-            margin-bottom: 20px;
-        }
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    #login-container {
-        transition: 0.4s;
-        width: 290px;
+        padding: 2rem;
     }
 }

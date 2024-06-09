@@ -6,10 +6,6 @@ body {
     width: 100%;
     margin: 0;
     font-family: sans-serif;
-}
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 
     // ******************** scrollbar ********************
     ::-webkit-scrollbar {
@@ -26,24 +22,9 @@ body {
     // ****************************************
 
     // ******************** generic tags ********************
-    // buttons
-    .submit-btn {
-        background-color: #f1f0f0;
-        color: #0cad78;
-        box-shadow: none !important;
-        border: 1px solid #bdbdbd !important;
-    }
-
-    .cancel-btn {
-        background-color: #f1f0f0;
-        color: #f96c4a;
-        box-shadow: none !important;
-        border: 1px solid #bdbdbd !important;
-    }
-
     .link {
         transition: 0.8s;
-        color: #0cad78;
+        color: #005cbb;
         cursor: pointer;
         text-decoration: none;
         text-align: center;
@@ -51,10 +32,7 @@ body {
 
     .link:hover {
         transition: 0.8s;
-        color: #0cad7779;
+        color: #034c95;
     }
     // ****************************************
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
