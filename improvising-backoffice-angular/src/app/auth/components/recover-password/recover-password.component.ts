@@ -18,6 +18,6 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './recover-password.component.html',
   styleUrl: './recover-password.component.scss'
 })
-export class RecoverPasswordComponent {
+export default class RecoverPasswordComponent {
 
 }

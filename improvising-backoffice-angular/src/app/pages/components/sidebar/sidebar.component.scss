@@ -10,10 +10,8 @@ div {
         margin: 0;
         padding: 0;
         list-style-type: none;
-        text-align: center;
 
         li {
-            transition: 0.2s;
             color: #fff;
             margin: 1rem;
             display: flex;
@@ -21,15 +19,11 @@ div {
             justify-content: center;
             cursor: pointer;
 
-            p {
-                margin: 0;
-                padding: 0.5rem;
+            a {
+                text-decoration: none;
+                color: #fff;
+                padding: 0.2rem;
             }
-        }
-
-        li:hover {
-            transition: 0.2s;
-            color: #b6b6b6;
         }
     }
 }

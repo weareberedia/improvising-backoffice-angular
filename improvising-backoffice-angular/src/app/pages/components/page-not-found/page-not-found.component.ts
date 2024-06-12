@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'page-not-found-component',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './page-not-found.component.html',
   styleUrl: './page-not-found.component.scss'
 })
-export class PageNotFoundComponent {
+export default class PageNotFoundComponent {
 
 }

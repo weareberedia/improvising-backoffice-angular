@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -6,12 +7,13 @@ import { MatIconModule } from '@angular/material/icon';
   selector: 'modules-component',
   standalone: true,
   imports: [
+    RouterModule,
     MatIconModule,
     MatButtonModule
   ],
   templateUrl: './modules.component.html',
   styleUrl: './modules.component.scss'
 })
-export class ModulesComponent {
+export default class ModulesComponent {
 
 }

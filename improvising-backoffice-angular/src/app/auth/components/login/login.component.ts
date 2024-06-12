@@ -20,7 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
-export class LoginComponent {
+export default class LoginComponent {
   private _hidePassword: boolean;
 
   set hidePassword(hidePassword: boolean) {

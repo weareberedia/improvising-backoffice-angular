@@ -1,6 +1,4 @@
 import { Route } from '@angular/router';
-import { routes as authRoutes } from './auth/auth.routes'
-import { routes as pagesRoutes } from './pages/pages.routes';
 
 export const routes: Route[] = Array.prototype.concat(
     [
@@ -9,12 +7,45 @@ export const routes: Route[] = Array.prototype.concat(
             pathMatch: 'full',
             redirectTo: 'inicio/modulos'
         },
-        // {
-        //     path: '**',
-        //     pathMatch: 'full',
-        //     loadComponent: () => import('./components/page-not-found/page-not-found.component').then((mod) => mod.PageNotFoundComponent)
-        // }
-    ],
-    pagesRoutes.map(route => route),
-    authRoutes.map(route => route)
+        {
+            path: 'inicio',
+            loadComponent: () => import('./pages/home.component'),
+            children: [
+                {
+                    path: 'modulos',
+                    loadComponent: () => import('./pages/modules/modules.component'),
+                    children: [
+                        {
+                            path: 'recursos-humanos',
+                            loadComponent: () => import('./pages/modules/modules/recursos-humanos/recursos-humanos.component'),
+                        }
+                    ]
+                },
+                {
+                    path: 'perfil',
+                    loadComponent: () => import('./pages/components/profile/profile.component'),
+                }
+            ]
+        },
+        {
+            path: 'autenticacion',
+            loadComponent: () => import('./auth/auth.component'),
+            children: [
+                {
+                    path: '',
+                    loadComponent: () => import('./auth/components/login/login.component'),
+                    data: { animation: 'loginFade' },
+                },
+                {
+                    path: 'recuperar-contraseña',
+                    loadComponent: () => import('./auth/components/recover-password/recover-password.component'),
+                    data: { animation: 'recoverPasswordFade' }
+                }
+            ]
+        },
+        {
+            path: '**',
+            loadComponent: () => import('./pages/components/page-not-found/page-not-found.component')
+        }
+    ]
 )

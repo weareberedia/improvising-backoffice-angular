@@ -10,7 +10,7 @@ import { fade } from '../animations/fade';
   styleUrl: './auth.component.scss',
   animations: [fade],
 })
-export class AuthComponent {
+export default class AuthComponent {
   constructor(private _contexts: ChildrenOutletContexts) { }
 
   getRouteAnimationData() {
