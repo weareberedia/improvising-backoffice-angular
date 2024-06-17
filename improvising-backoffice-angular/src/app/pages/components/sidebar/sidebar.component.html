@@ -1,13 +1,41 @@
 <div>
     <ul>
         <li><img (click)="navigateToHome()" src="assets/icons/beredia.svg" width="50rem"></li>
+
+        @if (router.url == '/inicio/modulos' || router.url == '/inicio/perfil') {
         <li>
             <mat-icon>list</mat-icon>
-            <a href="#/inicio/modulos">Módulos</a>
+            <a routerLink="/">Módulos</a>
         </li>
         <li>
             <mat-icon>account_circle</mat-icon>
-            <a href="#/inicio/perfil">Perfil</a>
+            <a routerLink="/inicio/perfil">Perfil</a>
         </li>
+        }
+
+        @if (
+        router.url == '/inicio/modulos/recursos-humanos' ||
+        router.url == '/inicio/modulos/recursos-humanos/gestion-colaboradores' ||
+        router.url == '/inicio/modulos/recursos-humanos/vacaciones' ||
+        router.url == '/inicio/modulos/recursos-humanos/viaticos' ||
+        router.url == '/inicio/modulos/recursos-humanos/prestaciones'
+        ) {
+        <li>
+            <mat-icon>disabled_by_default</mat-icon>
+            <a routerLink="modulos/recursos-humanos/gestion-colaboradores">Colaboradores</a>
+        </li>
+        <li>
+            <mat-icon>disabled_by_default</mat-icon>
+            <a routerLink="modulos/recursos-humanos/vacaciones">Vacaciones</a>
+        </li>
+        <li>
+            <mat-icon>disabled_by_default</mat-icon>
+            <a routerLink="modulos/recursos-humanos/viaticos">Viáticos</a>
+        </li>
+        <li>
+            <mat-icon>disabled_by_default</mat-icon>
+            <a routerLink="modulos/recursos-humanos/prestaciones">Prestaciones</a>
+        </li>
+        }
     </ul>
 </div>

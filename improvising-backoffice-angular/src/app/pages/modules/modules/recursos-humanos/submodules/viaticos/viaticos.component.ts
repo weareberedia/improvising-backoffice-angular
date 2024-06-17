@@ -3,14 +3,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'vacaciones-component',
+  selector: 'viaticos-component',
   standalone: true,
   imports: [
     MatButtonModule,
     MatIconModule
   ],
-  templateUrl: './vacaciones.component.html',
+  templateUrl: './viaticos.component.html',
 })
-export default class VacacionesComponent {
+export default class ViaticosComponent {
 
 }

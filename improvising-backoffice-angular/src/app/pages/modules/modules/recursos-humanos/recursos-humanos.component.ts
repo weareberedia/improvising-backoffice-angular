@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './recursos-humanos.component.html',
-  styleUrl: './recursos-humanos.component.scss'
 })
 export default class RecursosHumanosComponent {
 

@@ -34,5 +34,36 @@ body {
         transition: 0.8s;
         color: #034c95;
     }
+
+    .create-icon {
+        color: #0cad78;
+    }
+
+    .edit-icon {
+        color: #cc8b14;
+    }
+
+    .delete-icon {
+        color: #f96c4a;
+    }
+
+    .file-icon {
+        color: #567fcf;
+    }
+
+    .crud-container {
+        background-color: #fff;
+        margin: 2rem;
+        padding: 1rem;
+        border: 0.15rem solid #dcdcdc;
+        border-radius: 1rem;
+
+        h3 {
+            font-size: 1rem;
+            font-weight: lighter;
+            color: #b1b1b1;
+        }
+    }
+
     // ****************************************
 }
