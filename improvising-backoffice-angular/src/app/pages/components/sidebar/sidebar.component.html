@@ -1,14 +1,14 @@
 <div>
-    <ul>
-        <li><img (click)="navigateToHome()" src="assets/icons/beredia.svg" width="50rem"></li>
+    <img (click)="navigateToHome()" src="assets/icons/beredia.svg" width="50rem">
 
+    <ul>
         @if (router.url == '/inicio/modulos' || router.url == '/inicio/perfil') {
         <li>
-            <mat-icon>list</mat-icon>
+            <mat-icon class="icon">list</mat-icon>
             <a routerLink="/">Módulos</a>
         </li>
         <li>
-            <mat-icon>account_circle</mat-icon>
+            <mat-icon class="icon">account_circle</mat-icon>
             <a routerLink="/inicio/perfil">Perfil</a>
         </li>
         }
@@ -21,20 +21,85 @@
         router.url == '/inicio/modulos/recursos-humanos/prestaciones'
         ) {
         <li>
-            <mat-icon>disabled_by_default</mat-icon>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
             <a routerLink="modulos/recursos-humanos/gestion-colaboradores">Colaboradores</a>
         </li>
         <li>
-            <mat-icon>disabled_by_default</mat-icon>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
             <a routerLink="modulos/recursos-humanos/vacaciones">Vacaciones</a>
         </li>
         <li>
-            <mat-icon>disabled_by_default</mat-icon>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
             <a routerLink="modulos/recursos-humanos/viaticos">Viáticos</a>
         </li>
         <li>
-            <mat-icon>disabled_by_default</mat-icon>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
             <a routerLink="modulos/recursos-humanos/prestaciones">Prestaciones</a>
+        </li>
+        }
+
+        @if (
+        router.url == '/inicio/modulos/finanzas' ||
+        router.url == '/inicio/modulos/finanzas/cuentas-empleados' ||
+        router.url == '/inicio/modulos/finanzas/transacciones' ||
+        router.url == '/inicio/modulos/finanzas/nomina'
+        ) {
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/finanzas/cuentas-empleados">Cuentas Empleados</a>
+        </li>
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/finanzas/transacciones">Transacciones</a>
+        </li>
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/finanzas/nomina">Nómina</a>
+        </li>
+        }
+
+        @if (
+        router.url == '/inicio/modulos/inventario' ||
+        router.url == '/inicio/modulos/inventario/mercancia' ||
+        router.url == '/inicio/modulos/inventario/almacenes' ||
+        router.url == '/inicio/modulos/inventario/alertas' ||
+        router.url == '/inicio/modulos/inventario/ajustes' ||
+        router.url == '/inicio/modulos/inventario/proveedores'
+        ) {
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/inventario/mercancia">Mercancia</a>
+        </li>
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/inventario/almacenes">Almacenes</a>
+        </li>
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/inventario/alertas">Alertas</a>
+        </li>
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/inventario/ajustes">Ajustes</a>
+        </li>
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/inventario/proveedores">Proveedores</a>
+        </li>
+        }
+
+        @if (
+        router.url == '/inicio/modulos/soporte-tecnico' ||
+        router.url == '/inicio/modulos/soporte-tecnico/permisos' ||
+        router.url == '/inicio/modulos/soporte-tecnico/tickets'
+        ) {
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/soporte-tecnico/permisos">Permisos</a>
+        </li>
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/soporte-tecnico/tickets">Tickets</a>
         </li>
         }
     </ul>
