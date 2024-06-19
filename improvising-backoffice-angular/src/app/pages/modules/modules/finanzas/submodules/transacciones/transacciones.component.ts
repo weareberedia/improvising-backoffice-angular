@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTableModule } from '@angular/material/table';
 
-interface Benefits {
-  id: number,
-  description: string;
+interface Transaction {
+  id: number;
+  amount: number;
+  date: string;
 }
 
 @Component({
@@ -16,14 +19,16 @@ interface Benefits {
     MatTooltipModule,
     MatButtonModule,
     MatIconModule,
+    MatInputModule,
+    MatDatepickerModule,
     MatTableModule,
   ],
-  templateUrl: './transacciones.component.html'
+  templateUrl: './transacciones.component.html',
 })
 export default class TransaccionesComponent {
 
   private _displayedColumns: string[];
-  private _dataSource: Benefits[];
+  private _dataSource: Transaction[];
 
   get displayedColumns() {
     return this._displayedColumns;
@@ -34,19 +39,22 @@ export default class TransaccionesComponent {
   }
 
   constructor() {
-    this._displayedColumns = ['id', 'description', 'actions'];
+    this._displayedColumns = ['id', 'amount', 'date', 'actions'];
     this._dataSource = [
       {
         id: 1,
-        description: 'Derecho a 15 día de vacaciones desde el primer año'
+        amount: 2000,
+        date: '01/01/2024'
       },
       {
         id: 2,
-        description: 'Descuento del 20% en el colegio Chapultepec'
+        amount: 2500,
+        date: '01/01/2024'
       },
       {
         id: 3,
-        description: 'Aguinaldo equivalente a 2 meses de sueldo'
+        amount: 10000,
+        date: '01/01/2024'
       }
     ];
   }

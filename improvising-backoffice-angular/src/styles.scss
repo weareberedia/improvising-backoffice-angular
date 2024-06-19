@@ -51,12 +51,33 @@ body {
         color: #567fcf;
     }
 
+    .money-icon {
+        color: #4ebb69;
+    }
+
+    .search-icon {
+        color: #decd61;
+    }
+
+    .task-icon {
+        color: #a9a9a9;
+    }
+
+    .check-task-icon {
+        color: #8edfcf;
+    }
+
     .crud-container {
         background-color: #fff;
         margin: 2rem;
         padding: 1rem;
         border: 0.15rem solid #dcdcdc;
         border-radius: 1rem;
+
+        .row-container {
+            display: flex;
+            justify-content: space-between;
+        }
 
         h3 {
             font-size: 1rem;

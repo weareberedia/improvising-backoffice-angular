@@ -2,26 +2,50 @@
 
     <h3>Transacciones Financieras</h3>
 
-    <button mat-icon-button matTooltip="Registrar prestación">
-        <mat-icon class="create-icon">add</mat-icon>
-    </button>
+    <div class="row-container">
+        <div>
+            <mat-form-field>
+                <mat-label>Ingresa un rango de fechas</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate placeholder="Fecha inicio">
+                    <input matEndDate placeholder="Fecha fin">
+                </mat-date-range-input>
+                <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"
+                    matTooltip="Seleccionar fechas"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field>
+            <button mat-icon-button matTooltip="Consultar transacciones">
+                <mat-icon class="search-icon">search</mat-icon>
+            </button>
+        </div>
+
+        <button mat-icon-button matTooltip="Realizar corte diario">
+            <mat-icon class="money-icon">payments</mat-icon>
+        </button>
+    </div>
 
     <table mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>Identificador</th>
-            <td mat-cell *matCellDef="let benefit"> {{benefit.id}} </td>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.id}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="description">
-            <th mat-header-cell *matHeaderCellDef>Apellidos</th>
-            <td mat-cell *matCellDef="let benefit"> {{benefit.description}} </td>
+        <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef>Monto</th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.amount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef>Fecha de la transacción</th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.date}} </td>
         </ng-container>
 
         <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef>Acciones</th>
-            <td mat-cell *matCellDef="let benefit">
-                <button mat-icon-button matTooltip="Dar de baja prestación">
-                    <mat-icon class="delete-icon">delete</mat-icon>
+            <td mat-cell *matCellDef="let transaction">
+                <button mat-icon-button matTooltip="Cargar factura">
+                    <mat-icon class="file-icon">upload_file</mat-icon>
                 </button>
             </td>
         </ng-container>

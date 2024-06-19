@@ -18,7 +18,8 @@
         router.url == '/inicio/modulos/recursos-humanos/gestion-colaboradores' ||
         router.url == '/inicio/modulos/recursos-humanos/vacaciones' ||
         router.url == '/inicio/modulos/recursos-humanos/viaticos' ||
-        router.url == '/inicio/modulos/recursos-humanos/prestaciones'
+        router.url == '/inicio/modulos/recursos-humanos/prestaciones' ||
+        router.url == '/inicio/modulos/recursos-humanos/capacitaciones'
         ) {
         <li>
             <mat-icon class="icon">disabled_by_default</mat-icon>
@@ -35,6 +36,10 @@
         <li>
             <mat-icon class="icon">disabled_by_default</mat-icon>
             <a routerLink="modulos/recursos-humanos/prestaciones">Prestaciones</a>
+        </li>
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/recursos-humanos/capacitaciones">Capacitaciones</a>
         </li>
         }
 
@@ -90,13 +95,8 @@
 
         @if (
         router.url == '/inicio/modulos/soporte-tecnico' ||
-        router.url == '/inicio/modulos/soporte-tecnico/permisos' ||
         router.url == '/inicio/modulos/soporte-tecnico/tickets'
         ) {
-        <li>
-            <mat-icon class="icon">disabled_by_default</mat-icon>
-            <a routerLink="modulos/soporte-tecnico/permisos">Permisos</a>
-        </li>
         <li>
             <mat-icon class="icon">disabled_by_default</mat-icon>
             <a routerLink="modulos/soporte-tecnico/tickets">Tickets</a>

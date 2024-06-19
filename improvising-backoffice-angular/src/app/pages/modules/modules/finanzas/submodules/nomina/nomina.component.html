@@ -1,8 +1,52 @@
 <div class="crud-container">
 
-    <h3>Nomina</h3>
+    <h3>Nómina</h3>
 
-    <button mat-icon-button matTooltip="Registrar puesto de trabajo">
-        <mat-icon class="create-icon">add</mat-icon>
+    <mat-form-field>
+        <mat-label>Ingresa un rango de fechas</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Fecha inicio">
+            <input matEndDate placeholder="Fecha fin">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker" matTooltip="Seleccionar fechas"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+    <button mat-icon-button matTooltip="Consultar nóminas">
+        <mat-icon class="search-icon">search</mat-icon>
     </button>
+
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>Identificador</th>
+            <td mat-cell *matCellDef="let payroll"> {{payroll.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef>Monto</th>
+            <td mat-cell *matCellDef="let payroll"> {{payroll.amount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="taxes">
+            <th mat-header-cell *matHeaderCellDef>Impuestos</th>
+            <td mat-cell *matCellDef="let payroll"> {{payroll.taxes}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="createdDate">
+            <th mat-header-cell *matHeaderCellDef>Fecha de generación</th>
+            <td mat-cell *matCellDef="let payroll"> {{payroll.createdDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Acciones</th>
+            <td mat-cell *matCellDef="let payroll">
+                <button mat-icon-button matTooltip="Descargar pdf">
+                    <mat-icon class="file-icon">download</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
 </div>

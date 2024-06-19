@@ -1,1 +1,38 @@
-<p>datos-cuentas-empleados works!</p>
+<div class="crud-container">
+
+    <h3>Cuentas de Empleados</h3>
+
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="employeeId">
+            <th mat-header-cell *matHeaderCellDef>Identificador</th>
+            <td mat-cell *matCellDef="let employee"> {{employee.employeeId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="employeeName">
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
+            <td mat-cell *matCellDef="let employee"> {{employee.employeeName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="employeeLastName">
+            <th mat-header-cell *matHeaderCellDef>Apellidos</th>
+            <td mat-cell *matCellDef="let employee"> {{employee.employeeLastName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="accountNumber">
+            <th mat-header-cell *matHeaderCellDef>Número de cuenta</th>
+            <td mat-cell *matCellDef="let employee"> {{employee.accountNumber}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Acciones</th>
+            <td mat-cell *matCellDef="let employee">
+                <button mat-icon-button matTooltip="Ver depositos realizados">
+                    <mat-icon class="money-icon">attach_money</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
