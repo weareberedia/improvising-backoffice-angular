@@ -2,7 +2,7 @@
 
     <h3>Capacitaciones</h3>
 
-    <button mat-icon-button matTooltip="Registrar capacitación"><mat-icon class="create-icon">add</mat-icon></button>
+    <button mat-icon-button matTooltip="Registrar nuevo"><mat-icon class="create-icon">add</mat-icon></button>
 
     <table mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="id">
@@ -16,7 +16,7 @@
         </ng-container>
 
         <ng-container matColumnDef="description">
-            <th mat-header-cell *matHeaderCellDef>Descripcion</th>
+            <th mat-header-cell *matHeaderCellDef>Descripción</th>
             <td mat-cell *matCellDef="let training"> {{training.description}} </td>
         </ng-container>
 
@@ -29,10 +29,10 @@
                 <button mat-icon-button matTooltip="Revisar resultados">
                     <mat-icon class="check-task-icon">fact_check</mat-icon>
                 </button>
-                <button mat-icon-button matTooltip="Editar capacitación">
+                <button mat-icon-button matTooltip="Editar información">
                     <mat-icon class="edit-icon">edit</mat-icon>
                 </button>
-                <button mat-icon-button matTooltip="Dar de baja capacitación">
+                <button mat-icon-button matTooltip="Dar de baja">
                     <mat-icon class="delete-icon">delete</mat-icon>
                 </button>
             </td>

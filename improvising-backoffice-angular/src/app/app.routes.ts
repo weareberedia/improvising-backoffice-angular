@@ -106,22 +106,6 @@ export const routes: Route[] = Array.prototype.concat(
                     ],
 
                 },
-                {
-                    path: 'modulos/soporte-tecnico',
-                    pathMatch: 'full',
-                    redirectTo: 'modulos/soporte-tecnico/tickets',
-                },
-                {
-                    path: 'modulos/soporte-tecnico',
-                    loadComponent: () => import('./pages/modules/modules/soporte-tecnico/soporte-tecnico.component'),
-                    children: [
-                        {
-                            path: 'tickets',
-                            loadComponent: () => import('./pages/modules/modules/soporte-tecnico/submodules/tickets/tickets.component'),
-                        },
-                    ],
-
-                },
             ]
         },
         {

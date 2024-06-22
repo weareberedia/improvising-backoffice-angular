@@ -38,7 +38,7 @@ export default class PrestacionesComponent {
     this._dataSource = [
       {
         id: 1,
-        description: 'Derecho a 15 día de vacaciones desde el primer año'
+        description: 'Derecho a 15 días de vacaciones desde el primer año'
       },
       {
         id: 2,

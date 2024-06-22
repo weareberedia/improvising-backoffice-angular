@@ -2,10 +2,6 @@
 
     <h3>Viáticos</h3>
 
-    <button mat-icon-button matTooltip="Registrar solicitud">
-        <mat-icon class="create-icon">add</mat-icon>
-    </button>
-
     <table mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>Identificador de solicitud</th>
@@ -24,7 +20,11 @@
 
         <ng-container matColumnDef="amount">
             <th mat-header-cell *matHeaderCellDef>Monto</th>
-            <td mat-cell *matCellDef="let travelExpensesRequest"> {{travelExpensesRequest.amount}} </td>
+            <td mat-cell *matCellDef="let travelExpensesRequest">
+                {{
+                travelExpensesRequest.amount.toLocaleString('en-US', { style: 'currency', currency: 'USD'})
+                }}
+            </td>
         </ng-container>
 
         <ng-container matColumnDef="actions">

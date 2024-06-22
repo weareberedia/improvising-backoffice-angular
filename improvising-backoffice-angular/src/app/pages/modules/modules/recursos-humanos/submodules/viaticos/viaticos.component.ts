@@ -42,19 +42,19 @@ export default class ViaticosComponent {
         id: 1,
         employeeName: 'Abraham',
         employeeLastName: 'Berrelleza',
-        amount: 12
+        amount: 1200
       },
       {
         id: 1,
         employeeName: 'Miguel',
         employeeLastName: 'Heredia',
-        amount: 20
+        amount: 2000
       },
       {
         id: 3,
         employeeName: 'Adrian',
         employeeLastName: 'Sanchez',
-        amount: 15
+        amount: 15000
       }
     ];
   }

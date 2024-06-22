@@ -46,19 +46,19 @@ export default class NominaComponent {
         id: 1,
         amount: 250000,
         taxes: 50000,
-        createdDate: '121212121212'
+        createdDate: '15/01/2024'
       },
       {
         id: 2,
         amount: 255200,
         taxes: 51000,
-        createdDate: '343434343434'
+        createdDate: '30/01/2024'
       },
       {
         id: 3,
         amount: 248000,
         taxes: 47500,
-        createdDate: '565656565656'
+        createdDate: '15/02/2024'
       }
     ];
   }
