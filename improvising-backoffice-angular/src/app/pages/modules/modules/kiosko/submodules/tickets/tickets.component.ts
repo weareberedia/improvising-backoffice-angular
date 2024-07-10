@@ -4,15 +4,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-interface Product {
+interface Ticket {
   id: number;
-  name: string;
   description: string;
-  stock: number;
+  date: string;
 }
 
 @Component({
-  selector: 'mercancia-component',
+  selector: 'employee-tickets-component',
   standalone: true,
   imports: [
     MatButtonModule,
@@ -20,12 +19,12 @@ interface Product {
     MatTooltipModule,
     MatTableModule
   ],
-  templateUrl: './mercancia.component.html',
+  templateUrl: './tickets.component.html',
 })
-export default class MercanciaComponent {
+export default class TicketsComponent {
 
   private _displayedColumns: string[];
-  private _dataSource: Product[];
+  private _dataSource: Ticket[];
 
   get displayedColumns() {
     return this._displayedColumns;
@@ -36,26 +35,13 @@ export default class MercanciaComponent {
   }
 
   constructor() {
-    this._displayedColumns = ['id', 'name', 'description', 'stock', 'actions'];
+    this._displayedColumns = ['id', 'actions'];
     this._dataSource = [
       {
         id: 1,
-        name: 'Servidor Intel Xeon',
         description: 'Ejemplo',
-        stock: 7
-      },
-      {
-        id: 2,
-        name: 'Conectores RJ45',
-        description: 'Ejemplo',
-        stock: 55
-      },
-      {
-        id: 3,
-        name: 'Latop ThinkPad L',
-        description: 'Ejemplo',
-        stock: 3
+        date: '01/01/2024'
       }
-    ];
+    ]
   }
 }

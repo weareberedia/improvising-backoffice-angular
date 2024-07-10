@@ -13,47 +13,47 @@ export const routes: Route[] = Array.prototype.concat(
             children: [
                 {
                     path: 'modulos',
-                    loadComponent: () => import('./pages/modules/modules.component'),
+                    loadComponent: () => import('./pages/modules/modules.component')
                 },
                 {
                     path: 'perfil',
-                    loadComponent: () => import('./pages/components/profile/profile.component'),
+                    loadComponent: () => import('./pages/components/profile/profile.component')
                 },
                 {
                     path: 'modulos/recursos-humanos',
                     pathMatch: 'full',
-                    redirectTo: 'modulos/recursos-humanos/gestion-colaboradores',
+                    redirectTo: 'modulos/recursos-humanos/colaboradores'
                 },
                 {
                     path: 'modulos/recursos-humanos',
                     loadComponent: () => import('./pages/modules/modules/recursos-humanos/recursos-humanos.component'),
                     children: [
                         {
-                            path: 'gestion-colaboradores',
-                            loadComponent: () => import('./pages/modules/modules/recursos-humanos/submodules/gestion-colaboradores/gestion-colaboradores.component'),
+                            path: 'colaboradores',
+                            loadComponent: () => import('./pages/modules/modules/recursos-humanos/submodules/colaboradores/colaboradores.component')
                         },
                         {
                             path: 'vacaciones',
-                            loadComponent: () => import('./pages/modules/modules/recursos-humanos/submodules/vacaciones/vacaciones.component'),
+                            loadComponent: () => import('./pages/modules/modules/recursos-humanos/submodules/vacaciones/vacaciones.component')
                         },
                         {
                             path: 'viaticos',
-                            loadComponent: () => import('./pages/modules/modules/recursos-humanos/submodules/viaticos/viaticos.component'),
+                            loadComponent: () => import('./pages/modules/modules/recursos-humanos/submodules/viaticos/viaticos.component')
                         },
                         {
                             path: 'prestaciones',
-                            loadComponent: () => import('./pages/modules/modules/recursos-humanos/submodules/prestaciones/prestaciones.component'),
+                            loadComponent: () => import('./pages/modules/modules/recursos-humanos/submodules/prestaciones/prestaciones.component')
                         },
                         {
                             path: 'capacitaciones',
-                            loadComponent: () => import('./pages/modules/modules/recursos-humanos/submodules/capacitaciones/capacitaciones.component'),
+                            loadComponent: () => import('./pages/modules/modules/recursos-humanos/submodules/capacitaciones/capacitaciones.component')
                         }
                     ]
                 },
                 {
                     path: 'modulos/finanzas',
                     pathMatch: 'full',
-                    redirectTo: 'modulos/finanzas/cuentas-empleados',
+                    redirectTo: 'modulos/finanzas/cuentas-empleados'
                 },
                 {
                     path: 'modulos/finanzas',
@@ -65,19 +65,18 @@ export const routes: Route[] = Array.prototype.concat(
                         },
                         {
                             path: 'transacciones',
-                            loadComponent: () => import('./pages/modules/modules/finanzas/submodules/transacciones/transacciones.component'),
+                            loadComponent: () => import('./pages/modules/modules/finanzas/submodules/transacciones/transacciones.component')
                         },
                         {
                             path: 'nomina',
-                            loadComponent: () => import('./pages/modules/modules/finanzas/submodules/nomina/nomina.component'),
+                            loadComponent: () => import('./pages/modules/modules/finanzas/submodules/nomina/nomina.component')
                         }
-                    ],
-
+                    ]
                 },
                 {
                     path: 'modulos/inventario',
                     pathMatch: 'full',
-                    redirectTo: 'modulos/inventario/mercancia',
+                    redirectTo: 'modulos/inventario/mercancia'
                 },
                 {
                     path: 'modulos/inventario',
@@ -88,23 +87,33 @@ export const routes: Route[] = Array.prototype.concat(
                             loadComponent: () => import('./pages/modules/modules/inventario/submodules/mercancia/mercancia.component')
                         },
                         {
-                            path: 'almacenes',
-                            loadComponent: () => import('./pages/modules/modules/inventario/submodules/almacenes/almacenes.component'),
-                        },
-                        {
-                            path: 'alertas',
-                            loadComponent: () => import('./pages/modules/modules/inventario/submodules/alertas/alertas.component'),
-                        },
-                        {
-                            path: 'ajustes',
-                            loadComponent: () => import('./pages/modules/modules/inventario/submodules/ajustes/ajustes.component'),
-                        },
-                        {
                             path: 'proveedores',
-                            loadComponent: () => import('./pages/modules/modules/inventario/submodules/proveedores/proveedores.component'),
+                            loadComponent: () => import('./pages/modules/modules/inventario/submodules/proveedores/proveedores.component')
                         }
-                    ],
-
+                    ]
+                },
+                {
+                    path: 'modulos/kiosko',
+                    pathMatch: 'full',
+                    redirectTo: 'modulos/kiosko/tickets'
+                },
+                {
+                    path: 'modulos/kiosko',
+                    loadComponent: () => import('./pages/modules/modules/kiosko/kiosko.component'),
+                    children: [
+                        {
+                            path: 'tickets',
+                            loadComponent: () => import('./pages/modules/modules/kiosko/submodules/tickets/tickets.component')
+                        },
+                        {
+                            path: 'vacaciones',
+                            loadComponent: () => import('./pages/modules/modules/kiosko/submodules/vacaciones/vacaciones.component')
+                        },
+                        {
+                            path: 'viaticos',
+                            loadComponent: () => import('./pages/modules/modules/kiosko/submodules/viaticos/viaticos.component')
+                        }
+                    ]
                 },
             ]
         },
@@ -115,7 +124,7 @@ export const routes: Route[] = Array.prototype.concat(
                 {
                     path: '',
                     loadComponent: () => import('./auth/components/login/login.component'),
-                    data: { animation: 'loginFade' },
+                    data: { animation: 'loginFade' }
                 },
                 {
                     path: 'recuperar-contraseña',

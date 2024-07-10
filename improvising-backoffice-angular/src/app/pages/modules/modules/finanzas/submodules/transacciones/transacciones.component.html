@@ -11,17 +11,17 @@
                     <input matEndDate placeholder="Fecha fin">
                 </mat-date-range-input>
                 <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-                <mat-datepicker-toggle matIconSuffix [for]="picker"
-                    matTooltip="Seleccionar fechas"></mat-datepicker-toggle>
+                <mat-datepicker-toggle matIconSuffix [for]="picker" matTooltip="Seleccionar fechas">
+                </mat-datepicker-toggle>
                 <mat-date-range-picker #picker></mat-date-range-picker>
             </mat-form-field>
             <button mat-icon-button matTooltip="Consultar">
-                <mat-icon class="search-icon">search</mat-icon>
+                <mat-icon class="lightyellow-color">search</mat-icon>
             </button>
         </div>
 
         <button mat-icon-button matTooltip="Realizar corte diario">
-            <mat-icon class="money-icon">payments</mat-icon>
+            <mat-icon class="green-color">payments</mat-icon>
         </button>
     </div>
 
@@ -49,7 +49,7 @@
             <th mat-header-cell *matHeaderCellDef>Acciones</th>
             <td mat-cell *matCellDef="let transaction">
                 <button mat-icon-button matTooltip="Cargar factura">
-                    <mat-icon class="file-icon">upload_file</mat-icon>
+                    <mat-icon class="lightblue-color">upload_file</mat-icon>
                 </button>
             </td>
         </ng-container>

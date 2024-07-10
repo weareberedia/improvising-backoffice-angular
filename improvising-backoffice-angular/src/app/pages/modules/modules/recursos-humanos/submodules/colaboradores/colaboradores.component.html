@@ -1,8 +1,8 @@
 <div class="crud-container">
 
-    <h3>Gestion de Colaboradores</h3>
+    <h3>Colaboradores</h3>
 
-    <button mat-icon-button matTooltip="Registrar nuevo"><mat-icon class="create-icon">add</mat-icon></button>
+    <button mat-icon-button matTooltip="Registrar nuevo"><mat-icon class="aquamarine-color">add</mat-icon></button>
 
     <table mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="id">
@@ -43,13 +43,13 @@
             <th mat-header-cell *matHeaderCellDef>Acciones</th>
             <td mat-cell *matCellDef="let employee">
                 <button mat-icon-button matTooltip="Digitalizar documentos">
-                    <mat-icon class="file-icon">description</mat-icon>
+                    <mat-icon class="lightblue-color">description</mat-icon>
                 </button>
                 <button mat-icon-button matTooltip="Editar información">
-                    <mat-icon class="edit-icon">edit</mat-icon>
+                    <mat-icon class="darkyellow-color">edit</mat-icon>
                 </button>
                 <button mat-icon-button matTooltip="Dar de baja">
-                    <mat-icon class="delete-icon">delete</mat-icon>
+                    <mat-icon class="darkred-color">delete</mat-icon>
                 </button>
             </td>
         </ng-container>

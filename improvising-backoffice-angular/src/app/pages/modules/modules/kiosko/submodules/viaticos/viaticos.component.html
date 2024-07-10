@@ -1,0 +1,42 @@
+<div class="crud-container">
+
+    <h3>Proveedores</h3>
+
+    <button mat-icon-button matTooltip="Realizar solicitud">
+        <mat-icon class="aquamarine-color">add</mat-icon>
+    </button>
+
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>Identificador</th>
+            <td mat-cell *matCellDef="let travelExpenseRequest"> {{travelExpenseRequest.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef>Monto</th>
+            <td mat-cell *matCellDef="let travelExpenseRequest"> {{travelExpenseRequest.amount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="startDate">
+            <th mat-header-cell *matHeaderCellDef>Fecha de inicio</th>
+            <td mat-cell *matCellDef="let travelExpenseRequest"> {{travelExpenseRequest.startDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="endDate">
+            <th mat-header-cell *matHeaderCellDef>Fecha de regreso</th>
+            <td mat-cell *matCellDef="let travelExpenseRequest"> {{travelExpenseRequest.endDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Acciones</th>
+            <td mat-cell *matCellDef="let travelExpenseRequest">
+                <button mat-icon-button matTooltip="Cancelar solicitud">
+                    <mat-icon class="darkred-color">close</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

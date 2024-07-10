@@ -4,13 +4,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTableModule } from '@angular/material/table';
 
-interface Supplier {
+interface VacationRequest {
   id: number;
-  name: string;
+  startDate: string;
+  endDate: string;
+  status: string;
 }
 
 @Component({
-  selector: 'proveedores-component',
+  selector: 'employee-vacaciones-component',
   standalone: true,
   imports: [
     MatButtonModule,
@@ -18,12 +20,12 @@ interface Supplier {
     MatTooltipModule,
     MatTableModule,
   ],
-  templateUrl: './proveedores.component.html'
+  templateUrl: './vacaciones.component.html'
 })
-export default class ProveedoresComponent {
+export default class VacacionesComponent {
 
   private _displayedColumns: string[];
-  private _dataSource: Supplier[];
+  private _dataSource: VacationRequest[];
 
   get displayedColumns() {
     return this._displayedColumns;
@@ -34,19 +36,13 @@ export default class ProveedoresComponent {
   }
 
   constructor() {
-    this._displayedColumns = ['id', 'name', 'actions'];
+    this._displayedColumns = ['id', 'startDate', 'endDate', 'status', 'actions'];
     this._dataSource = [
       {
         id: 1,
-        name: 'Beredia'
-      },
-      {
-        id: 2,
-        name: 'Google'
-      },
-      {
-        id: 3,
-        name: 'Apple'
+        startDate: '25/01/2024',
+        endDate: '05/02/2024',
+        status: 'PENDIENTE'
       }
     ];
   }

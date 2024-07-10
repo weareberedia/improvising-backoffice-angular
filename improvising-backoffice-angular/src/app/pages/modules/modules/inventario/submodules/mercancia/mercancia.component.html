@@ -1,1 +1,48 @@
-<p>datos-cuentas-empleados works!</p>
+<div class="crud-container">
+
+    <h3>Mercancia</h3>
+
+    <button mat-icon-button matTooltip="Ingreso">
+        <mat-icon class="aquamarine-color">keyboard_double_arrow_up</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Egreso">
+        <mat-icon class="darkred-color">keyboard_double_arrow_down</mat-icon>
+    </button>
+
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>Identificador</th>
+            <td mat-cell *matCellDef="let product"> {{product.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
+            <td mat-cell *matCellDef="let product"> {{product.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef>Descripción</th>
+            <td mat-cell *matCellDef="let product"> {{product.description}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="stock">
+            <th mat-header-cell *matHeaderCellDef>Cantidad Disponible</th>
+            <td mat-cell *matCellDef="let product"> {{product.stock}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Acciones</th>
+            <td mat-cell *matCellDef="let product">
+                <button mat-icon-button matTooltip="Editar información">
+                    <mat-icon class="darkyellow-color">edit</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Dar de baja">
+                    <mat-icon class="darkred-color">delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

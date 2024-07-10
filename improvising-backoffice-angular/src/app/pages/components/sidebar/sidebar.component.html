@@ -15,7 +15,7 @@
 
         @if (
         router.url == '/inicio/modulos/recursos-humanos' ||
-        router.url == '/inicio/modulos/recursos-humanos/gestion-colaboradores' ||
+        router.url == '/inicio/modulos/recursos-humanos/colaboradores' ||
         router.url == '/inicio/modulos/recursos-humanos/vacaciones' ||
         router.url == '/inicio/modulos/recursos-humanos/viaticos' ||
         router.url == '/inicio/modulos/recursos-humanos/prestaciones' ||
@@ -23,7 +23,7 @@
         ) {
         <li>
             <mat-icon class="icon">disabled_by_default</mat-icon>
-            <a routerLink="modulos/recursos-humanos/gestion-colaboradores">Colaboradores</a>
+            <a routerLink="modulos/recursos-humanos/colaboradores">Colaboradores</a>
         </li>
         <li>
             <mat-icon class="icon">disabled_by_default</mat-icon>
@@ -66,9 +66,6 @@
         @if (
         router.url == '/inicio/modulos/inventario' ||
         router.url == '/inicio/modulos/inventario/mercancia' ||
-        router.url == '/inicio/modulos/inventario/almacenes' ||
-        router.url == '/inicio/modulos/inventario/alertas' ||
-        router.url == '/inicio/modulos/inventario/ajustes' ||
         router.url == '/inicio/modulos/inventario/proveedores'
         ) {
         <li>
@@ -77,29 +74,27 @@
         </li>
         <li>
             <mat-icon class="icon">disabled_by_default</mat-icon>
-            <a routerLink="modulos/inventario/almacenes">Almacenes</a>
-        </li>
-        <li>
-            <mat-icon class="icon">disabled_by_default</mat-icon>
-            <a routerLink="modulos/inventario/alertas">Alertas</a>
-        </li>
-        <li>
-            <mat-icon class="icon">disabled_by_default</mat-icon>
-            <a routerLink="modulos/inventario/ajustes">Ajustes</a>
-        </li>
-        <li>
-            <mat-icon class="icon">disabled_by_default</mat-icon>
             <a routerLink="modulos/inventario/proveedores">Proveedores</a>
         </li>
         }
 
         @if (
-        router.url == '/inicio/modulos/soporte-tecnico' ||
-        router.url == '/inicio/modulos/soporte-tecnico/tickets'
+        router.url == '/inicio/modulos/kiosko' ||
+        router.url == '/inicio/modulos/kiosko/tickets' ||
+        router.url == '/inicio/modulos/kiosko/vacaciones' ||
+        router.url == '/inicio/modulos/kiosko/viaticos'
         ) {
         <li>
             <mat-icon class="icon">disabled_by_default</mat-icon>
-            <a routerLink="modulos/soporte-tecnico/tickets">Tickets</a>
+            <a routerLink="modulos/kiosko/tickets">Tickets</a>
+        </li>
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/kiosko/vacaciones">Vacaciones</a>
+        </li>
+        <li>
+            <mat-icon class="icon">disabled_by_default</mat-icon>
+            <a routerLink="modulos/kiosko/viaticos">Viáticos</a>
         </li>
         }
     </ul>

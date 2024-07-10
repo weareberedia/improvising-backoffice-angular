@@ -2,7 +2,7 @@
 
     <h3>Capacitaciones</h3>
 
-    <button mat-icon-button matTooltip="Registrar nuevo"><mat-icon class="create-icon">add</mat-icon></button>
+    <button mat-icon-button matTooltip="Registrar nuevo"><mat-icon class="aquamarine-color">add</mat-icon></button>
 
     <table mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="id">
@@ -24,16 +24,16 @@
             <th mat-header-cell *matHeaderCellDef>Acciones</th>
             <td mat-cell *matCellDef="let training">
                 <button mat-icon-button matTooltip="Asignar a empleado">
-                    <mat-icon class="task-icon">assignment</mat-icon>
+                    <mat-icon class="lightblue-color">assignment</mat-icon>
                 </button>
                 <button mat-icon-button matTooltip="Revisar resultados">
-                    <mat-icon class="check-task-icon">fact_check</mat-icon>
+                    <mat-icon class="lightaquamarine-color">fact_check</mat-icon>
                 </button>
                 <button mat-icon-button matTooltip="Editar información">
-                    <mat-icon class="edit-icon">edit</mat-icon>
+                    <mat-icon class="darkyellow-color">edit</mat-icon>
                 </button>
                 <button mat-icon-button matTooltip="Dar de baja">
-                    <mat-icon class="delete-icon">delete</mat-icon>
+                    <mat-icon class="darkred-color">delete</mat-icon>
                 </button>
             </td>
         </ng-container>

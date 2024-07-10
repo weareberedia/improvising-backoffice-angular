@@ -14,7 +14,7 @@ interface Employee {
 }
 
 @Component({
-  selector: 'gestion-colaboradores-component',
+  selector: 'colaboradores-component',
   standalone: true,
   imports: [
     MatButtonModule,
@@ -22,9 +22,9 @@ interface Employee {
     MatTooltipModule,
     MatTableModule,
   ],
-  templateUrl: './gestion-colaboradores.component.html',
+  templateUrl: './colaboradores.component.html',
 })
-export default class GestionColaboradoresComponent {
+export default class ColaboradoresComponent {
 
   private _displayedColumns: string[];
   private _dataSource: Employee[];

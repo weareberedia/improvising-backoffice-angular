@@ -1,0 +1,28 @@
+<div class="crud-container">
+
+    <h3>Tickets Abiertos</h3>
+
+    <button mat-icon-button matTooltip="Levantar solicitud"><mat-icon class="aquamarine-color">add</mat-icon></button>
+
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>Identificador</th>
+            <td mat-cell *matCellDef="let ticket"> {{ticket.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Acciones</th>
+            <td mat-cell *matCellDef="let ticket">
+                <button mat-icon-button matTooltip="Abrir chat">
+                    <mat-icon class="aquamarine-color">chat</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Consultar descripción">
+                    <mat-icon class="darkyellow-color">description</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
