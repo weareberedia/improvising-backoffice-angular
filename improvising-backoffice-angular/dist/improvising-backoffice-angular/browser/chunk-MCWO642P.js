@@ -1,0 +1,1 @@
+import{Kb as a,Rb as s,ha as o,rb as i,sb as r}from"./chunk-DORY63QC.js";var c=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["profile-component"]],standalone:!0,features:[s],decls:2,vars:0,template:function(n,f){n&1&&(i(0,"p"),a(1,"profile works!"),r())}});let t=e;return t})();export{c as default};
